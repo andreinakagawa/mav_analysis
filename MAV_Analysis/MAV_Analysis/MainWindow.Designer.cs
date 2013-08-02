@@ -47,15 +47,15 @@ namespace MAV_Analysis
             this.zgMAV = new ZedGraph.ZedGraphControl();
             this.lbLog = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbWindowSize = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbNumbRepet = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnRun = new System.Windows.Forms.Button();
             this.rbAlg4 = new System.Windows.Forms.RadioButton();
             this.rbAlg3 = new System.Windows.Forms.RadioButton();
             this.rbAlg2 = new System.Windows.Forms.RadioButton();
             this.rbAlg1 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbNumbRepet = new System.Windows.Forms.TextBox();
-            this.tbWindowSize = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +113,38 @@ namespace MAV_Analysis
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choose the Algorithm";
             // 
+            // tbWindowSize
+            // 
+            this.tbWindowSize.Location = new System.Drawing.Point(101, 69);
+            this.tbWindowSize.Name = "tbWindowSize";
+            this.tbWindowSize.Size = new System.Drawing.Size(100, 20);
+            this.tbWindowSize.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Window size";
+            // 
+            // tbNumbRepet
+            // 
+            this.tbNumbRepet.Location = new System.Drawing.Point(101, 95);
+            this.tbNumbRepet.Name = "tbNumbRepet";
+            this.tbNumbRepet.Size = new System.Drawing.Size(100, 20);
+            this.tbNumbRepet.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Numb. Repetitions";
+            // 
             // btnRun
             // 
             this.btnRun.Location = new System.Drawing.Point(9, 119);
@@ -166,38 +198,6 @@ namespace MAV_Analysis
             this.rbAlg1.TabStop = true;
             this.rbAlg1.Text = "Algorithm 1";
             this.rbAlg1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Numb. Repetitions";
-            // 
-            // tbNumbRepet
-            // 
-            this.tbNumbRepet.Location = new System.Drawing.Point(101, 95);
-            this.tbNumbRepet.Name = "tbNumbRepet";
-            this.tbNumbRepet.Size = new System.Drawing.Size(100, 20);
-            this.tbNumbRepet.TabIndex = 7;
-            // 
-            // tbWindowSize
-            // 
-            this.tbWindowSize.Location = new System.Drawing.Point(101, 69);
-            this.tbWindowSize.Name = "tbWindowSize";
-            this.tbWindowSize.Size = new System.Drawing.Size(100, 20);
-            this.tbWindowSize.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Window size";
             // 
             // MainWindow
             // 

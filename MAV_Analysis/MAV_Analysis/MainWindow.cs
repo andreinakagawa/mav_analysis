@@ -37,6 +37,8 @@ namespace MAV_Analysis
         private PointPairList emgPointPair = new PointPairList();
         private PointPairList mavPointPair = new PointPairList();
 
+       
+
         public MainWindow()
         {
             InitializeComponent();
@@ -127,6 +129,6 @@ namespace MAV_Analysis
             lbLog.Items.Add("Running finished");
             lbLog.Items.Add("Total time: " + measureTime.ToString());
             lbLog.Items.Add("---------------------------------------");
-        }
+        }       
     }
 }
