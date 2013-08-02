@@ -115,14 +115,17 @@ namespace MAV_Analysis
             int numbRep = Convert.ToInt32(tbNumbRepet.Text);
             int windowSize = Convert.ToInt32(tbWindowSize.Text);
 
+            double[] teste = new double[400];
+            Array.Copy(_emgSignalList.ToArray(), teste, 400);
+
             if (rbAlg1.Checked)
-                measureTime = Measure(MAV.Algorithm1, numbRep, _emgSignalList.ToArray(), windowSize, ref mavArray);
+                measureTime = Measure(MAV.Algorithm1, numbRep, teste, windowSize, ref mavArray);
             else if (rbAlg2.Checked)
-                measureTime = Measure(MAV.Algorithm2, numbRep, _emgSignalList.ToArray(), windowSize, ref mavArray);
+                measureTime = Measure(MAV.Algorithm2, numbRep, teste, windowSize, ref mavArray);
             else if (rbAlg3.Checked)
-                measureTime = Measure(MAV.Algorithm3, numbRep, _emgSignalList.ToArray(), windowSize, ref mavArray);
+                measureTime = Measure(MAV.Algorithm3, numbRep, teste, windowSize, ref mavArray);
             else if (rbAlg4.Checked)
-                measureTime = Measure(MAV.Algorithm4, numbRep, _emgSignalList.ToArray(), windowSize, ref mavArray);
+                measureTime = Measure(MAV.Algorithm4, numbRep, teste, windowSize, ref mavArray);
 
             Plot(mavArray, ref zgMAV, ref mavPointPair);
 
