@@ -94,7 +94,7 @@ namespace BiolabProcessing
 
             for (int i = 0; i < signal.Length; i++)
             {
-                if (i > windowSize)
+                if (i >= windowSize)
                 {                   
                     sum -= window.Dequeue();
                     sum += Math.Abs(signal[i]);
@@ -120,7 +120,7 @@ namespace BiolabProcessing
 
             for (int i = 0; i < signal.Length; i++)
             {
-                if (i > windowSize)
+                if (i >= windowSize)
                 {
                     sum -= Math.Abs(signal[first]);
                     sum += Math.Abs(signal[i]);
@@ -132,6 +132,31 @@ namespace BiolabProcessing
                     sum += Math.Abs(signal[i]);
                     mav[i] = sum / windowSize;                    
                 }               
+            }
+
+            return mav;
+        }
+
+        public static double[] Algorithm5(double[] signal, int windowSize)
+        {
+            double[] mav = new double[signal.Length];
+            int first = 0;
+            double sum = 0, meanNew = 0, meanOld=0;
+
+            for (int i = 0; i < signal.Length; i++)
+            {
+                if (i >= windowSize)
+                {
+                    meanOld = mav[i - 1];
+                    //meanNew = meanOld + ((Math.Abs(signal[i]) - Math.Abs(signal[first])) / (double)windowSize);
+                    mav[i] = meanOld + ((Math.Abs(signal[i]) - Math.Abs(signal[first])) / (double)windowSize);
+                    first++;
+                }
+                else
+                {
+                    sum += Math.Abs(signal[i]);
+                    mav[i] = sum / windowSize;                    
+                }
             }
 
             return mav;
