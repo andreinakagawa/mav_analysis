@@ -141,14 +141,13 @@ namespace BiolabProcessing
         {
             double[] mav = new double[signal.Length];
             int first = 0;
-            double sum = 0, meanNew = 0, meanOld=0;
+            double sum = 0, meanOld=0;
 
             for (int i = 0; i < signal.Length; i++)
             {
                 if (i >= windowSize)
                 {
                     meanOld = mav[i - 1];
-                    //meanNew = meanOld + ((Math.Abs(signal[i]) - Math.Abs(signal[first])) / (double)windowSize);
                     mav[i] = meanOld + ((Math.Abs(signal[i]) - Math.Abs(signal[first])) / (double)windowSize);
                     first++;
                 }
